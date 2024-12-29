@@ -1,0 +1,743 @@
+<check_type:"Windows" version:"2">
+<group_policy: "Audit File for Windows Certification">
+
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-001 - Certification Checklist Item - Bluetooth Support Service"
+      info        : "Ensure the bluetooth services are set to disabled"
+      solution    : "Disable all bluetooth services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"
+      service_name: "bthserv"
+      svc_option  : CAN_NOT_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-002 - Certification Checklist Item - Bluetooth Handsfree Service"
+      info        : "Ensure the bluetooth services are set to disabled"
+      solution    : "Disable all bluetooth services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"||"Manual"
+      service_name: "BthHFSrv"
+      svc_option  : CAN_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-003 - Certification Checklist Item - Bluetooth Audio Gateway Service"
+      info        : "Ensure the bluetooth services are set to disabled"
+      solution    : "Disable all bluetooth services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"||"Manual"
+      service_name: "BTAGService"
+      svc_option  : CAN_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-004 - Certification Checklist Item - Bluetooth User Support Service"
+      info        : "Ensure the bluetooth services are set to disabled"
+      solution    : "Disable all bluetooth services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"||"Manual"
+      service_name: "BluetoothUserService_29fca101"
+      svc_option  : CAN_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-005 - Certification Checklist Item - Internet Connection Sharing Service"
+      info        : "Ensure the Internet Connection Sharing service is set to disabled"
+      solution    : "Disable the Internet Connection Sharing (ICS) service"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"
+      service_name: "SharedAccess"
+      svc_option  : CAN_NOT_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-006 - Certification Checklist Item - Smart Card Service"
+      info        : "Ensure the Smart Card service is set to disabled"
+      solution    : "Disable the Smart Card services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"
+      service_name: "SCardSvr"
+      svc_option  : CAN_NOT_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-007 - Certification Checklist Item - Smart Card Device Enumeration Service"
+      info        : "Ensure the Smart Card service is set to disabled"
+      solution    : "Disable the Smart Card services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"||"Manual"
+      service_name: "ScDeviceEnum"
+      svc_option  : CAN_NOT_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-008 - Certification Checklist Item - Smart Card Removal Policy Service"
+      info        : "Ensure the Smart Card service is set to disabled"
+      solution    : "Disable the Smart Card services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"||"Manual"
+      service_name: "SCPolicySvc"
+      svc_option  : CAN_NOT_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-009 - Certification Checklist Item - WLAN AutoConfig Service"
+      info        : "Ensure the WLAN AutoConfig service is set to disabled"
+      solution    : "Disable the WLAN AutoConfig service"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"
+      service_name: "WlanSvc"
+      svc_option  : CAN_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-010 - Certification Checklist Item - WWAN AutoConfig Service"
+      info        : "Ensure the WWAN AutoConfig service is set to disabled"
+      solution    : "Disable the WWAN AutoConfig service"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"
+      service_name: "WwanSvc"
+      svc_option  : CAN_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-011 - Certification Checklist Item - XBOX Accessory Management Service"
+      info        : "Ensure the XBOX services are set to disabled"
+      solution    : "Disable the XBOX services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"
+      service_name: "XboxGipSvc"
+      svc_option  : CAN_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-012 - Certification Checklist Item - XBOX Live Auth Manager Service"
+      info        : "Ensure the XBOX services are set to disabled"
+      solution    : "Disable the XBOX services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"
+      service_name: "XblAuthManager"
+      svc_option  : CAN_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-013 - Certification Checklist Item - XBOX Live Game Save Service"
+      info        : "Ensure the XBOX services are set to disabled"
+      solution    : "Disable the XBOX services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"
+      service_name: "XblGameSave"
+      svc_option  : CAN_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-014 - Certification Checklist Item - XBOX Live Networking Service"
+      info        : "Ensure the XBOX services are set to disabled"
+      solution    : "Disable the XBOX services"
+      value_type  : SERVICE_SET
+      value_data  : "Disabled"
+      service_name: "D"
+      svc_option  : CAN_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-015 - Certification Checklist Item - Splunk Forwarding Service"
+      info        : "Ensure the Splunk Forwarding service is set to automatic"
+      solution    : "Enable the Splunk Forwarding service"
+      value_type  : SERVICE_SET
+      value_data  : "Automatic"
+      service_name: "SplunkForwarder"
+      svc_option  : CAN_NOT_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : SERVICE_POLICY
+      description : "WN-CKL-016 - Certification Checklist Item - McAfee DLP Endpoint Service"
+      info        : "Ensure the 'McAfeeDLPAgentService' is set to automatic"
+      solution    : "Enable the 'McAfeeDLPAgentService'"
+      value_type  : SERVICE_SET
+      value_data  : "Automatic"
+      service_name: "McAfeeDLPAgentService"
+      svc_option  : CAN_NOT_BE_NULL
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-017 - Certification Checklist Item - Ensure McAfee DLP Endpoint Service is Running"
+      info        : "Ensure the 'McAfeeDLPAgentService' service is running."
+      solution    : "Start the 'McAfeeDLPAgentService' service"
+      value_type  : POLICY_TEXT
+      value_data  : "Running"
+      powershell_args     : "get-wmiobject win32_service | where-object{$_.name -eq 'McAfeeDLPAgentService'} | select state"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-018 - Certification Checklist Item - Ensure McAfee Service Controller Service is Running"
+      info        : "Ensure the 'mfemms' service is running."
+      solution    : "Start the 'mfemms' service"
+      value_type  : POLICY_TEXT
+      value_data  : "Running"
+      powershell_args     : "get-wmiobject win32_service | where-object{$_.name -eq 'mfemms'} | select state"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-019 - Certification Checklist Item - Display user information when the session is locked"
+      info        : "Ensure the policy value is set to display user information when the session is locked."
+      solution    : "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> Security Options >> 'Display user information when the session is locked' is set to the following: 'Display name/D/UN.'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\microsoft\windows\currentversion\policies\system' -name 'dontdisplaylockeduserid' | select dontdisplaylockeduserid | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-020 - Certification Checklist Item - Don't Display Last Username"
+      info        : "Ensure the policy value is set to display user information when the session is locked."
+      solution    : "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> Security Options >> 'Do not display last username' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\microsoft\windows\currentversion\policies\system' -name 'dontdisplaylastusername' | select dontdisplaylastusername | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-021 - Certification Checklist Item - Allow Cortana Set to Disabled"
+      info        : "Ensure the policy value 'Allow Cortana' is set to disabled."
+      solution    : "Configure the policy value for Computer Configuration >> Administrative Templates >> Windows Components >> Search >> 'Allow Cortana' is set to the following: 'Disabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "0"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\windows search' -name 'AllowCortana' | select AllowCortana | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : CHECK_ACCOUNT
+      description : "WN-CKL-022 - Certification Checklist Item - Ensure Local Admin Account has been renamed apropriately"
+      info        : "Ensure the local admin account has been renamed apropriately."
+      solution    : "Rename the admin account from 'Administrator' to organization-defined parameter."
+      value_type  : POLICY_TEXT
+      value_data  : "Administrator"
+      account_type     : ADMINISTRATOR_ACCOUNT
+      check_type: CHECK_NOT_EQUAL
+</custom_item>
+
+<custom_item>
+      type        : CHECK_ACCOUNT
+      description : "WN-CKL-023 - Certification Checklist Item - Ensure Local Guest Account has been renamed apropriately"
+      info        : "Ensure the local guest account has been renamed apropriately."
+      solution    : "Rename the guest account from 'Guest' to organization-defined parameter."
+      value_type  : POLICY_TEXT
+      value_data  : "Guest"
+      account_type     : GUEST_ACCOUNT
+      check_type: CHECK_NOT_EQUAL
+</custom_item>
+
+<custom_item>
+      type        : CHECK_ACCOUNT
+      description : "WN-CKL-024 - Certification Checklist Item - Ensure Local Guest Account has been disabled."
+      info        : "Ensure the local guest account has been disabled."
+      solution    : "Disable the local guest account."
+      value_type  : POLICY_SET
+      value_data  : "Disabled"
+      account_type     : GUEST_ACCOUNT
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-025 - Certification Checklist Item - Ensure Encryption is Configured on the System"
+      info        : "Ensure encryption is configured on the system."
+      solution    : "Set up encryption on the local system"
+      value_type  : POLICY_TEXT
+      value_data  : ""
+      powershell_args     : "Get-BitLockerVolume | select * | format-list"
+      severity : MEDIUM
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-026 - Certification Checklist Item - Ensure Encryption Method is Configured for 256 bit on the System"
+      info        : "Ensure encryption is configured on the system."
+      solution    : "Set up encryption on the local system"
+      value_type  : POLICY_TEXT
+      value_data  : "EncryptionMethod[\s]+:[\s]+XtsAes256"
+      powershell_args     : "Get-BitLockerVolume | select EncryptionMethod | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-027 - Certification Checklist Item - Ensure Encryption is Configured for the Entire System"
+      info        : "Ensure encryption is configured on the system."
+      solution    : "Set up encryption on the local system"
+      value_type  : POLICY_TEXT
+      value_data  : "VolumeStatus[\s]+:[\s]+FullyEncrypted"
+      powershell_args     : "Get-BitLockerVolume | select VolumeStatus | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-028 - Certification Checklist Item - Allow Users to Connect Remotely by using RDS"
+      info        : "Ensure the policy value 'Allow Users to Connect Remotely by using RDS' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Administrative Templates >> Windows Components >> Remote Desktop Services >> Remote Desktop Session Host >> Connections >> 'Allow users to connect remotely by using RDS' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "0"
+      powershell_args     : "Get-ItemProperty -path 'HKLM:\software\policies\microsoft\Windows NT\Terminal Services' -name 'fDenyTSConnections' | select fDenyTSConnections | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-029 - Certification Checklist Item - CD & DVD: Deny Write Access"
+      info        : "Ensure the policy value for 'CD & DVD: Deny Write Access' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Settings >> Policies >> Administrative Templates >> System >> Removable Storage Access >> 'CD and DVD: Deny Write Access' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\removablestoragedevices\{53f56308-b6bf-11d0-94f2-00a0c91efb8b}' -name 'Deny_Write' | select Deny_Write | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-030 - Certification Checklist Item - Floppy Drives: Deny Read Access"
+      info        : "Ensure the policy value for 'Floppy Drives: Deny Read Access' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Settings >> Policies >> Administrative Templates >> System >> Removable Storage Access >> 'Floppy Drives: Deny Read Access' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\removablestoragedevices\{53f56311-b6bf-11d0-94f2-00a0c91efb8b}' -name 'Deny_Read' | select Deny_Read | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-031 - Certification Checklist Item - Floppy Drives: Deny Write Access"
+      info        : "Ensure the policy value for 'Floppy Drives: Deny Write Access' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Settings >> Policies >> Administrative Templates >> System >> Removable Storage Access >> 'Floppy Drives: Deny Write Access' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\removablestoragedevices\{53f56311-b6bf-11d0-94f2-00a0c91efb8b}' -name 'Deny_Write' | select Deny_Write | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-032 - Certification Checklist Item - Removable Disks: Deny Read Access"
+      info        : "Ensure the policy value for 'Removable Disks: Deny Read Access' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Settings >> Policies >> Administrative Templates >> System >> Removable Storage Access >> 'Removable Disks: Deny Read Access' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\removablestoragedevices\{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}' -name 'Deny_Read' | select Deny_Read | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-033 - Certification Checklist Item - Removable Disks: Deny Write Access"
+      info        : "Ensure the policy value for 'Removable Disks: Deny Write Access' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Settings >> Policies >> Administrative Templates >> System >> Removable Storage Access >> 'Removable Disks: Deny Write Access' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\removablestoragedevices\{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}' -name 'Deny_Write' | select Deny_Write | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-034 - Certification Checklist Item - Tape Drives: Deny Write Access"
+      info        : "Ensure the policy value for 'Tape Drives: Deny Write Access' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Settings >> Policies >> Administrative Templates >> System >> Removable Storage Access >> 'Tape Drives: Deny Write Access' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\removablestoragedevices\{53f5630b-b6bf-11d0-94f2-00a0c91efb8b}' -name 'Deny_Write' | select Deny_Write | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-035 - Certification Checklist Item - WPD Devices: Deny Read Access"
+      info        : "Ensure the policy value for 'WPD Devices: Deny Read Access' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Settings >> Policies >> Administrative Templates >> System >> Removable Storage Access >> 'WPD Devices: Deny Read Access' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\removablestoragedevices\{6AC27878-A6FA-4155-BA85-F98F491D4F33}' -name 'Deny_Read' | select Deny_Read | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-036 - Certification Checklist Item - WPD Devices: Deny Write Access"
+      info        : "Ensure the policy value for 'WPD Devices: Deny Write Access' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Settings >> Policies >> Administrative Templates >> System >> Removable Storage Access >> 'WPD Devices: Deny Write Access' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\removablestoragedevices\{6AC27878-A6FA-4155-BA85-F98F491D4F33}' -name 'Deny_Write' | select Deny_Write | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-037 - Certification Checklist Item - WPD Devices: Deny Read Access"
+      info        : "Ensure the policy value for 'WPD Devices: Deny Read Access' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Settings >> Policies >> Administrative Templates >> System >> Removable Storage Access >> 'WPD Devices: Deny Read Access' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\removablestoragedevices\{F33FDC04-D1AC-4E8E-9A30-19BBD4B108AE}' -name 'Deny_Read' | select Deny_Read | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-038 - Certification Checklist Item - WPD Devices: Deny Write Access"
+      info        : "Ensure the policy value for 'WPD Devices: Deny Write Access' is set to enabled."
+      solution    : "Configure the policy value for Computer Configuration >> Settings >> Policies >> Administrative Templates >> System >> Removable Storage Access >> 'WPD Devices: Deny Write Access' is set to the following: 'Enabled'"
+      value_type  : POLICY_TEXT
+      value_data  : "1"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\policies\microsoft\windows\removablestoragedevices\{F33FDC04-D1AC-4E8E-9A30-19BBD4B108AE}' -name 'Deny_Write' | select Deny_Write | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-039 - Certification Checklist Item - Ensure KVM Banner is Configured with Correct PIDs"
+      info        : "Ensure KVM banner is configured correctly."
+      solution    : "Install banner software and ensure the 'Caption' registry key is configured correctly under 'hklm:\software\wow6432node\usaf\banner'"
+      value_type  : POLICY_TEXT
+      value_data  : "^(.*?\b"your pids here"\b)"
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\wow6432node\usaf\banner' -name 'Caption' | select Caption | format-list"
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-040 - Certification Checklist Item - Validate Operating System is Supported and Approved"
+      info        : "Ensure Operating System is Supported and Approved."
+      solution    : "Install supported Operating System"
+      value_type  : POLICY_TEXT
+      value_data  : ""
+      powershell_args     : "get-computerinfo | select OsName, OsVersion, OsArchitecture | format-list"
+      severity    : MEDIUM
+</custom_item>
+
+<custom_item>
+      type        : BANNER_CHECK
+      description : "WN-CKL-041 - Certification Checklist Item - Ensure the Logon Banner is Configured Apropriately"
+      info        : "Ensure the Logon Banner is configured correctly."
+      solution    : "Ensure the 'LegalNoticeText' registry key under 'hklm:\software\microsoft\windows\currentversion\policies\system' is configured to contain 'You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.
+By using this IS (which includes any device attached to this IS), you consent to the following conditions:
+-The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.
+-At any time, the USG may inspect and seize data stored on this IS.
+-Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose.
+-This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.
+-Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details.'"
+      value_type  : POLICY_TEXT
+      value_data  : "You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.
+By using this IS (which includes any device attached to this IS), you consent to the following conditions:
+-The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.
+-At any time, the USG may inspect and seize data stored on this IS.
+-Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose.
+-This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.
+-Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details."
+      reg_key     : "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System"
+      reg_item    : "LegalNoticeText"
+</custom_item>
+
+<custom_item>
+      type        : BANNER_CHECK
+      description : "WN-CKL-042 - Certification Checklist Item - Ensure the Logon Banner is Configured Apropriately"
+      info        : "Ensure the Logon Banner is configured correctly."
+      solution    : "Ensure the 'LegalNoticeCaption' registry key under 'hklm:\software\microsoft\windows\currentversion\policies\system' is configured to contain 'US Department of Defense Warning Statement'"
+      value_type  : POLICY_TEXT
+      value_data  : "US Department of Defense Warning Statement"
+      reg_key     : "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System"
+      reg_item    : "LegalNoticeCaption"
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-043 - Certification Checklist Item - Validate System Make/Model Information is Correct"
+      info        : "Ensure System is Information is Correct and Approved."
+      value_type  : POLICY_TEXT
+      value_data  : ""
+      powershell_args     : "wmic computersystem get model,manufacturer | format-list"
+      severity    : MEDIUM
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-044 - Certification Checklist Item - Validate System Serial Number Information is Correct"
+      info        : "Ensure System Information is Correct and Approved."
+      value_type  : POLICY_TEXT
+      value_data  : ""
+      powershell_args     : "wmic bios get serialnumber | format-list"
+      severity    : MEDIUM
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-045 - Certification Checklist Item - Validate HDD Information is Correct"
+      info        : "Ensure HDD is Information is Correct and Approved."
+      value_type  : POLICY_TEXT
+      value_data  : ""
+      powershell_args     : "wmic diskdrive get model,serialnumber,size | format-list"
+      severity    : MEDIUM
+</custom_item>
+
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-046 - Certification Checklist Item - Ensure SplunkForwarder Service is Running"
+      info        : "Ensure the 'SplunkForwarder' service is running."
+      solution    : "Start the 'SplunkForwarder' service"
+      value_type  : POLICY_TEXT
+      value_data  : "Running"
+      powershell_args     : "get-wmiobject win32_service | where-object{$_.name -eq 'SplunkForwarder'} | select state"
+      check_type  : CHECK_REGEX
+</custom_item>	
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-047 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\config'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\config'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\system32\config'. 'Audit  : NT AUTHORITY\Authenticated Users Failure ReadAndExecute NT AUTHORITY\Authenticated Users Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'JABTAFIATwBfAHMAMwAyAGMAbwBuAGYAIAA9ACAAKABnAGUAdAAtAGEAYwBsACAAJwBjADoAXAB3AGkAbgBkAG8AdwBzAFwAcwB5AHMAdABlAG0AMwAyAFwAYwBvAG4AZgBpAGcAJwAgAC0AYQB1AGQAaQB0ACkALgBhAHUAZABpAHQAdABvAHMAdAByAGkAbgBnAA0ACgANAAoAaQBmACAAKAAkAFMAUgBPAF8AcwAzADIAYwBvAG4AZgAgAC0AbQBhAHQAYwBoACAAJwAoAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AUgBlAGEAZABBAG4AZABFAHgAZQBjAHUAdABlACkAKAAuAHwAXABuACkAKgBBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBXAHIAaQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAFMAdQBjAGMAZQBzAHMAXABiACkAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEQAZQBsAGUAdABlAFMAdQBiAGQAaQByAGUAYwB0AG8AcgBpAGUAcwBBAG4AZABGAGkAbABlAHMAXABiACkAKAA/AD0ALgAqAD8AXABiAEQAZQBsAGUAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBDAGgAYQBuAGcAZQBQAGUAcgBtAGkAcwBzAGkAbwBuAHMAXABiACkAKAA/AD0ALgAqAD8AXABiAFQAYQBrAGUATwB3AG4AZQByAHMAaABpAHAAXABiACkAKQB8ACgAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIAVwByAGkAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBTAHUAYwBjAGUAcwBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBTAHUAYgBkAGkAcgBlAGMAdABvAHIAaQBlAHMAQQBuAGQARgBpAGwAZQBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAQwBoAGEAbgBnAGUAUABlAHIAbQBpAHMAcwBpAG8AbgBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBUAGEAawBlAE8AdwBuAGUAcgBzAGgAaQBwAFwAYgApACgALgB8AFwAbgApACoAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBSAGUAYQBkAEEAbgBkAEUAeABlAGMAdQB0AGUAKQApACcAKQB7AA0ACgAJACQAUABhAHMAcwA9ACIAVAByAHUAZQAiAA0ACgAJAHcAcgBpAHQAZQAtAGgAbwBzAHQAIAAoACIAUABhAHMAcwAgAD0AIAAiACwAIAAkAFAAYQBzAHMALAAiADsAIgAsACAAJABTAFIATwBfAHMAMwAyAGMAbwBuAGYAKQANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAJACQAUABhAHMAcwA9ACIARgBhAGwAcwBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAIgBQAGEAcwBzACAAPQAiACwAIAAkAFAAYQBzAHMALAAiADsAIgAsACAAJABTAFIATwBfAHMAMwAyAGMAbwBuAGYAKQANAAoAfQA='
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>	
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-048 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\winevt\Logs'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\winevt\Logs'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\system32\winevt\Logs'. 'Audit  : Administrators Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type: POLICY_TEXT
+      value_data: "True"
+      powershell_args     : 'JABTAFIATwBfAGUAdgB0AGwAbwBnACAAPQAgACgAZwBlAHQALQBhAGMAbAAgACcAYwA6AFwAdwBpAG4AZABvAHcAcwBcAHMAeQBzAHQAZQBtADMAMgBcAHcAaQBuAGUAdgB0AFwAbABvAGcAcwAnACAALQBhAHUAZABpAHQAKQAuAGEAdQBkAGkAdAB0AG8AcwB0AHIAaQBuAGcADQAKAA0ACgBpAGYAIAAoACQAUwBSAE8AXwBlAHYAdABsAG8AZwAgAC0AbQBhAHQAYwBoACAAJwBBAGQAbQBpAG4AaQBzAHQAcgBhAHQAbwByAHMAKAA/AD0ALgAqAD8AXABiAFcAcgBpAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAUwB1AGMAYwBlAHMAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAUwB1AGIAZABpAHIAZQBjAHQAbwByAGkAZQBzAEEAbgBkAEYAaQBsAGUAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEMAaABhAG4AZwBlAFAAZQByAG0AaQBzAHMAaQBvAG4AcwBcAGIAKQAoAD8APQAuACoAPwBcAGIAVABhAGsAZQBPAHcAbgBlAHIAcwBoAGkAcABcAGIAKQAnACkAewANAAoACQAkAFAAYQBzAHMAPQAiAFQAcgB1AGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACAAIgAsACAAJABQAGEAcwBzACwAIgA7ACIALAAgACQAUwBSAE8AXwBlAHYAdABsAG8AZwApAA0ACgB9AA0ACgBlAGwAcwBlAHsADQAKAAkAJABQAGEAcwBzAD0AIgBGAGEAbABzAGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACIALAAgACQAUABhAHMAcwAsACIAOwAiACwAIAAkAFMAUgBPAF8AZQB2AHQAbABvAGcAKQANAAoAfQA='
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>	
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-049 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\winevt\Logs'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\winevt\Logs'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\system32\winevt\Logs'. 'Audit  : Auditors Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'DQAKAA0ACgAkAFMAUgBPAF8AZQB2AHQAbABvAGcAMgAgAD0AIAAoAGcAZQB0AC0AYQBjAGwAIAAnAGMAOgBcAHcAaQBuAGQAbwB3AHMAXABzAHkAcwB0AGUAbQAzADIAXAB3AGkAbgBlAHYAdABcAGwAbwBnAHMAJwAgAC0AYQB1AGQAaQB0ACkALgBhAHUAZABpAHQAdABvAHMAdAByAGkAbgBnAA0ACgANAAoAaQBmACAAKAAkAFMAUgBPAF8AZQB2AHQAbABvAGcAMgAgAC0AbQBhAHQAYwBoACAAJwAoAC4AKgA/ACkAQQB1AGQAaQB0ACgALgAqAD8AKQAoAD8APQAuACoAPwBcAGIAVwByAGkAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBTAHUAYwBjAGUAcwBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBTAHUAYgBkAGkAcgBlAGMAdABvAHIAaQBlAHMAQQBuAGQARgBpAGwAZQBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAQwBoAGEAbgBnAGUAUABlAHIAbQBpAHMAcwBpAG8AbgBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBUAGEAawBlAE8AdwBuAGUAcgBzAGgAaQBwAFwAYgApACcAKQB7AA0ACgAJACQAUABhAHMAcwA9ACIAVAByAHUAZQAiAA0ACgAJAHcAcgBpAHQAZQAtAGgAbwBzAHQAIAAoACIAUABhAHMAcwAgAD0AIAAiACwAIAAkAFAAYQBzAHMALAAiADsAIgAsACAAJABTAFIATwBfAGUAdgB0AGwAbwBnADIAKQANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAJACQAUABhAHMAcwA9ACIARgBhAGwAcwBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAIgBQAGEAcwBzACAAPQAiACwAIAAkAFAAYQBzAHMALAAiADsAIgAsACAAJABTAFIATwBfAGUAdgB0AGwAbwBnADIAKQANAAoAfQANAAoA'
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>	
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-050 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\regedit.exe'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\regedit.exe'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\regedit.exe'. 'Audit  : NT AUTHORITY\Authenticated Users Failure ReadAndExecute NT AUTHORITY\Authenticated Users Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'JABTAFIATwBfAFIAZQBnAGUAZABpAHQAIAA9ACAAKABnAGUAdAAtAGEAYwBsACAAJwBjADoAXAB3AGkAbgBkAG8AdwBzAFwAcgBlAGcAZQBkAGkAdAAuAGUAeABlACcAIAAtAGEAdQBkAGkAdAApAC4AYQB1AGQAaQB0AHQAbwBzAHQAcgBpAG4AZwANAAoADQAKAGkAZgAgACgAJABTAFIATwBfAFIAZQBnAGUAZABpAHQAIAAtAG0AYQB0AGMAaAAgACcAKABBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFIAZQBhAGQAQQBuAGQARQB4AGUAYwB1AHQAZQApACgALgB8AFwAbgApACoAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIAVwByAGkAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBTAHUAYwBjAGUAcwBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBTAHUAYgBkAGkAcgBlAGMAdABvAHIAaQBlAHMAQQBuAGQARgBpAGwAZQBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAQwBoAGEAbgBnAGUAUABlAHIAbQBpAHMAcwBpAG8AbgBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBUAGEAawBlAE8AdwBuAGUAcgBzAGgAaQBwAFwAYgApACkAfAAoAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAFcAcgBpAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAUwB1AGMAYwBlAHMAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAUwB1AGIAZABpAHIAZQBjAHQAbwByAGkAZQBzAEEAbgBkAEYAaQBsAGUAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEMAaABhAG4AZwBlAFAAZQByAG0AaQBzAHMAaQBvAG4AcwBcAGIAKQAoAD8APQAuACoAPwBcAGIAVABhAGsAZQBPAHcAbgBlAHIAcwBoAGkAcABcAGIAKQAoAC4AfABcAG4AKQAqAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AUgBlAGEAZABBAG4AZABFAHgAZQBjAHUAdABlACkAKQAnACkAewANAAoACQAkAFAAYQBzAHMAPQAiAFQAcgB1AGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACAAIgAsACAAJABQAGEAcwBzACwAIgA7ACIALAAgACQAUwBSAE8AXwBSAGUAZwBlAGQAaQB0ACkADQAKAH0ADQAKAGUAbABzAGUAewANAAoACQAkAFAAYQBzAHMAPQAiAEYAYQBsAHMAZQAiAA0ACgAJAHcAcgBpAHQAZQAtAGgAbwBzAHQAIAAoACIAUABhAHMAcwAgAD0AIgAsACAAJABQAGEAcwBzACwAIgA7ACIALAAgACQAUwBSAE8AXwBSAGUAZwBlAGQAaQB0ACkADQAKAH0A'
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>	
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-051 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\eventvwr.msc'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\eventvwr.msc'"
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\system32\eventvwr.msc'. 'Audit  : NT AUTHORITY\Authenticated Users Failure ReadAndExecute NT AUTHORITY\Authenticated Users Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'JABTAFIATwBfAHMAMwAyAGUAdgB0AHYAdwBtAHMAYwAgAD0AIAAoAGcAZQB0AC0AYQBjAGwAIAAnAGMAOgBcAHcAaQBuAGQAbwB3AHMAXABzAHkAcwB0AGUAbQAzADIAXABlAHYAZQBuAHQAdgB3AHIALgBtAHMAYwAnACAALQBhAHUAZABpAHQAKQAuAGEAdQBkAGkAdAB0AG8AcwB0AHIAaQBuAGcADQAKAA0ACgBpAGYAIAAoACQAUwBSAE8AXwBzADMAMgBlAHYAdAB2AHcAbQBzAGMAIAAtAG0AYQB0AGMAaAAgACcAKABBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFIAZQBhAGQAQQBuAGQARQB4AGUAYwB1AHQAZQApACgALgB8AFwAbgApACoAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIAVwByAGkAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBTAHUAYwBjAGUAcwBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBTAHUAYgBkAGkAcgBlAGMAdABvAHIAaQBlAHMAQQBuAGQARgBpAGwAZQBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAQwBoAGEAbgBnAGUAUABlAHIAbQBpAHMAcwBpAG8AbgBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBUAGEAawBlAE8AdwBuAGUAcgBzAGgAaQBwAFwAYgApACkAfAAoAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAFcAcgBpAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAUwB1AGMAYwBlAHMAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAUwB1AGIAZABpAHIAZQBjAHQAbwByAGkAZQBzAEEAbgBkAEYAaQBsAGUAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEMAaABhAG4AZwBlAFAAZQByAG0AaQBzAHMAaQBvAG4AcwBcAGIAKQAoAD8APQAuACoAPwBcAGIAVABhAGsAZQBPAHcAbgBlAHIAcwBoAGkAcABcAGIAKQAoAC4AfABcAG4AKQAqAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AUgBlAGEAZABBAG4AZABFAHgAZQBjAHUAdABlACkAKQAnACkAewANAAoACQAkAFAAYQBzAHMAPQAiAFQAcgB1AGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACAAIgAsACAAJABQAGEAcwBzACwAIgA7ACIALAAgACQAUwBSAE8AXwBzADMAMgBlAHYAdAB2AHcAbQBzAGMAKQANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAJACQAUABhAHMAcwA9ACIARgBhAGwAcwBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAIgBQAGEAcwBzACAAPQAiACwAIAAkAFAAYQBzAHMALAAiADsAIgAsACAAJABTAFIATwBfAHMAMwAyAGUAdgB0AHYAdwBtAHMAYwApAA0ACgB9AA=='
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-052 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\eventvwr.exe'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\eventvwr.exe'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\system32\eventvwr.exe'. 'Audit  : NT AUTHORITY\Authenticated Users Failure ReadAndExecute NT AUTHORITY\Authenticated Users Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'JABTAFIATwBfAHMAMwAyAGUAdgB0AHYAdwAgAD0AIAAoAGcAZQB0AC0AYQBjAGwAIAAnAGMAOgBcAHcAaQBuAGQAbwB3AHMAXABzAHkAcwB0AGUAbQAzADIAXABlAHYAZQBuAHQAdgB3AHIALgBlAHgAZQAnACAALQBhAHUAZABpAHQAKQAuAGEAdQBkAGkAdAB0AG8AcwB0AHIAaQBuAGcADQAKAA0ACgBpAGYAIAAoACQAUwBSAE8AXwBzADMAMgBlAHYAdAB2AHcAIAAtAG0AYQB0AGMAaAAgACcAKABBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFIAZQBhAGQAQQBuAGQARQB4AGUAYwB1AHQAZQApACgALgB8AFwAbgApACoAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIAVwByAGkAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBTAHUAYwBjAGUAcwBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBTAHUAYgBkAGkAcgBlAGMAdABvAHIAaQBlAHMAQQBuAGQARgBpAGwAZQBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAQwBoAGEAbgBnAGUAUABlAHIAbQBpAHMAcwBpAG8AbgBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBUAGEAawBlAE8AdwBuAGUAcgBzAGgAaQBwAFwAYgApACkAfAAoAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAFcAcgBpAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAUwB1AGMAYwBlAHMAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAUwB1AGIAZABpAHIAZQBjAHQAbwByAGkAZQBzAEEAbgBkAEYAaQBsAGUAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEMAaABhAG4AZwBlAFAAZQByAG0AaQBzAHMAaQBvAG4AcwBcAGIAKQAoAD8APQAuACoAPwBcAGIAVABhAGsAZQBPAHcAbgBlAHIAcwBoAGkAcABcAGIAKQAoAC4AfABcAG4AKQAqAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AUgBlAGEAZABBAG4AZABFAHgAZQBjAHUAdABlACkAKQAnACkAewANAAoACQAkAFAAYQBzAHMAPQAiAFQAcgB1AGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACAAIgAsACAAJABQAGEAcwBzACwAIgA7ACIALAAgACQAUwBSAE8AXwBzADMAMgBlAHYAdAB2AHcAKQANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAJACQAUABhAHMAcwA9ACIARgBhAGwAcwBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAIgBQAGEAcwBzACAAPQAiACwAIAAkAFAAYQBzAHMALAAiADsAIgAsACAAJABTAFIATwBfAHMAMwAyAGUAdgB0AHYAdwApAA0ACgB9AA=='
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>
+
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-053 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\mmc.exe'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\mmc.exe'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\system32\mmc.exe'. 'Audit  : NT AUTHORITY\Authenticated Users Failure ReadAndExecute NT AUTHORITY\Authenticated Users Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+powershell_args     : 'JABTAFIATwBfAE0ATQBDACAAPQAgACgAZwBlAHQALQBhAGMAbAAgACcAYwA6AFwAdwBpAG4AZABvAHcAcwBcAHMAeQBzAHQAZQBtADMAMgBcAG0AbQBjAC4AZQB4AGUAJwAgAC0AYQB1AGQAaQB0ACkALgBhAHUAZABpAHQAdABvAHMAdAByAGkAbgBnAA0ACgANAAoAaQBmACAAKAAkAFMAUgBPAF8ATQBNAEMAIAAtAG0AYQB0AGMAaAAgACcAKABBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFIAZQBhAGQAQQBuAGQARQB4AGUAYwB1AHQAZQApACgALgB8AFwAbgApACoAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIAVwByAGkAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBTAHUAYwBjAGUAcwBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBTAHUAYgBkAGkAcgBlAGMAdABvAHIAaQBlAHMAQQBuAGQARgBpAGwAZQBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAQwBoAGEAbgBnAGUAUABlAHIAbQBpAHMAcwBpAG8AbgBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBUAGEAawBlAE8AdwBuAGUAcgBzAGgAaQBwAFwAYgApACkAfAAoAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAFcAcgBpAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAUwB1AGMAYwBlAHMAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAUwB1AGIAZABpAHIAZQBjAHQAbwByAGkAZQBzAEEAbgBkAEYAaQBsAGUAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEMAaABhAG4AZwBlAFAAZQByAG0AaQBzAHMAaQBvAG4AcwBcAGIAKQAoAD8APQAuACoAPwBcAGIAVABhAGsAZQBPAHcAbgBlAHIAcwBoAGkAcABcAGIAKQAoAC4AfABcAG4AKQAqAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AUgBlAGEAZABBAG4AZABFAHgAZQBjAHUAdABlACkAKQAnACkAewANAAoACQAkAFAAYQBzAHMAPQAiAFQAcgB1AGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACAAIgAsACAAJABQAGEAcwBzACwAIgA7ACIALAAgACQAUwBSAE8AXwBNAE0AQwApAA0ACgB9AA0ACgBlAGwAcwBlAHsADQAKAAkAJABQAGEAcwBzAD0AIgBGAGEAbABzAGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACIALAAgACQAUABhAHMAcwAsACIAOwAiACwAIAAkAFMAUgBPAF8ATQBNAEMAKQANAAoAfQA='
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-054 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\gpedit.msc'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\gpedit.msc'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\system32\gpedit.msc'. 'Audit  : NT AUTHORITY\Authenticated Users Failure ReadAndExecute NT AUTHORITY\Authenticated Users Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'JABTAFIATwBfAEcAcABlAGQAaQB0ACAAPQAgACgAZwBlAHQALQBhAGMAbAAgACcAYwA6AFwAdwBpAG4AZABvAHcAcwBcAHMAeQBzAHQAZQBtADMAMgBcAGcAcABlAGQAaQB0AC4AbQBzAGMAJwAgAC0AYQB1AGQAaQB0ACkALgBhAHUAZABpAHQAdABvAHMAdAByAGkAbgBnAA0ACgANAAoAaQBmACAAKAAkAFMAUgBPAF8ARwBwAGUAZABpAHQAIAAtAG0AYQB0AGMAaAAgACcAKABBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFIAZQBhAGQAQQBuAGQARQB4AGUAYwB1AHQAZQApACgALgB8AFwAbgApACoAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIAVwByAGkAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBTAHUAYwBjAGUAcwBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBTAHUAYgBkAGkAcgBlAGMAdABvAHIAaQBlAHMAQQBuAGQARgBpAGwAZQBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAQwBoAGEAbgBnAGUAUABlAHIAbQBpAHMAcwBpAG8AbgBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBUAGEAawBlAE8AdwBuAGUAcgBzAGgAaQBwAFwAYgApACkAfAAoAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAFcAcgBpAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAUwB1AGMAYwBlAHMAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAUwB1AGIAZABpAHIAZQBjAHQAbwByAGkAZQBzAEEAbgBkAEYAaQBsAGUAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEMAaABhAG4AZwBlAFAAZQByAG0AaQBzAHMAaQBvAG4AcwBcAGIAKQAoAD8APQAuACoAPwBcAGIAVABhAGsAZQBPAHcAbgBlAHIAcwBoAGkAcABcAGIAKQAoAC4AfABcAG4AKQAqAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AUgBlAGEAZABBAG4AZABFAHgAZQBjAHUAdABlACkAKQAnACkAewANAAoACQAkAFAAYQBzAHMAPQAiAFQAcgB1AGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACAAIgAsACAAJABQAGEAcwBzACwAIgA7ACIALAAgACQAUwBSAE8AXwBHAHAAZQBkAGkAdAApAA0ACgB9AA0ACgBlAGwAcwBlAHsADQAKAAkAJABQAGEAcwBzAD0AIgBGAGEAbABzAGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACIALAAgACQAUABhAHMAcwAsACIAOwAiACwAIAAkAFMAUgBPAF8ARwBwAGUAZABpAHQAKQANAAoAfQA='
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-055 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\compmgmt.msc'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\system32\compmgmt.msc'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\system32\compmgmt.msc'. 'Audit  : NT AUTHORITY\Authenticated Users Failure ReadAndExecute NT AUTHORITY\Authenticated Users Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'JABTAFIATwBfAEMAbwBtAHAAbQBnAG0AdAAgAD0AIAAoAGcAZQB0AC0AYQBjAGwAIAAnAGMAOgBcAHcAaQBuAGQAbwB3AHMAXABzAHkAcwB0AGUAbQAzADIAXABjAG8AbQBwAG0AZwBtAHQALgBtAHMAYwAnACAALQBhAHUAZABpAHQAKQAuAGEAdQBkAGkAdAB0AG8AcwB0AHIAaQBuAGcADQAKAA0ACgBpAGYAIAAoACQAUwBSAE8AXwBDAG8AbQBwAG0AZwBtAHQAIAAtAG0AYQB0AGMAaAAgACcAKABBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFIAZQBhAGQAQQBuAGQARQB4AGUAYwB1AHQAZQApACgALgB8AFwAbgApACoAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIAVwByAGkAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBTAHUAYwBjAGUAcwBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBTAHUAYgBkAGkAcgBlAGMAdABvAHIAaQBlAHMAQQBuAGQARgBpAGwAZQBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAQwBoAGEAbgBnAGUAUABlAHIAbQBpAHMAcwBpAG8AbgBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBUAGEAawBlAE8AdwBuAGUAcgBzAGgAaQBwAFwAYgApACkAfAAoAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAFcAcgBpAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAUwB1AGMAYwBlAHMAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAUwB1AGIAZABpAHIAZQBjAHQAbwByAGkAZQBzAEEAbgBkAEYAaQBsAGUAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEMAaABhAG4AZwBlAFAAZQByAG0AaQBzAHMAaQBvAG4AcwBcAGIAKQAoAD8APQAuACoAPwBcAGIAVABhAGsAZQBPAHcAbgBlAHIAcwBoAGkAcABcAGIAKQAoAC4AfABcAG4AKQAqAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AUgBlAGEAZABBAG4AZABFAHgAZQBjAHUAdABlACkAKQAnACkAewANAAoACQAkAFAAYQBzAHMAPQAiAFQAcgB1AGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACAAIgAsACAAJABQAGEAcwBzACwAIgA7ACIALAAgACQAUwBSAE8AXwBDAG8AbQBwAG0AZwBtAHQAKQANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAJACQAUABhAHMAcwA9ACIARgBhAGwAcwBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAIgBQAGEAcwBzACAAPQAiACwAIAAkAFAAYQBzAHMALAAiADsAIgAsACAAJABTAFIATwBfAEMAbwBtAHAAbQBnAG0AdAApAA0ACgB9AA=='
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-056 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\syswow64\config'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\syswow64\config'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\syswow64\config'. 'Audit  : NT AUTHORITY\Authenticated Users Failure ReadAndExecute NT AUTHORITY\Authenticated Users Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'JABTAFIATwBfAHMAdwA2ADQAYwBvAG4AZgAgAD0AIAAoAGcAZQB0AC0AYQBjAGwAIAAnAGMAOgBcAHcAaQBuAGQAbwB3AHMAXABzAHkAcwB3AG8AdwA2ADQAXABjAG8AbgBmAGkAZwAnACAALQBhAHUAZABpAHQAKQAuAGEAdQBkAGkAdAB0AG8AcwB0AHIAaQBuAGcADQAKAA0ACgBpAGYAIAAoACQAUwBSAE8AXwBzAHcANgA0AGMAbwBuAGYAIAAtAG0AYQB0AGMAaAAgACcAKABBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFIAZQBhAGQAQQBuAGQARQB4AGUAYwB1AHQAZQApACgALgB8AFwAbgApACoAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIAVwByAGkAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBTAHUAYwBjAGUAcwBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBTAHUAYgBkAGkAcgBlAGMAdABvAHIAaQBlAHMAQQBuAGQARgBpAGwAZQBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBEAGUAbABlAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAQwBoAGEAbgBnAGUAUABlAHIAbQBpAHMAcwBpAG8AbgBzAFwAYgApACgAPwA9AC4AKgA/AFwAYgBUAGEAawBlAE8AdwBuAGUAcgBzAGgAaQBwAFwAYgApACkAfAAoAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAFcAcgBpAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAUwB1AGMAYwBlAHMAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAUwB1AGIAZABpAHIAZQBjAHQAbwByAGkAZQBzAEEAbgBkAEYAaQBsAGUAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEMAaABhAG4AZwBlAFAAZQByAG0AaQBzAHMAaQBvAG4AcwBcAGIAKQAoAD8APQAuACoAPwBcAGIAVABhAGsAZQBPAHcAbgBlAHIAcwBoAGkAcABcAGIAKQAoAC4AfABcAG4AKQAqAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AUgBlAGEAZABBAG4AZABFAHgAZQBjAHUAdABlACkAKQAnACkAewANAAoACQAkAFAAYQBzAHMAPQAiAFQAcgB1AGUAIgANAAoACQB3AHIAaQB0AGUALQBoAG8AcwB0ACAAKAAiAFAAYQBzAHMAIAA9ACAAIgAsACAAJABQAGEAcwBzACwAIgA7ACIALAAgACQAUwBSAE8AXwBzAHcANgA0AGMAbwBuAGYAKQANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAJACQAUABhAHMAcwA9ACIARgBhAGwAcwBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAIgBQAGEAcwBzACAAPQAiACwAIAAkAFAAYQBzAHMALAAiADsAIgAsACAAJABTAFIATwBfAHMAdwA2ADQAYwBvAG4AZgApAA0ACgB9AA=='
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-057 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\syswow64\eventvwr.exe'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\syswow64\eventvwr.exe'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\syswow64\eventvwr.exe'. 'Audit  : NT AUTHORITY\Authenticated Users Failure ReadAndExecute NT AUTHORITY\Authenticated Users Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'JABTAFIATwBfAHMAdwA2ADQAZQB2AHQAdgB3ACAAPQAgACgAZwBlAHQALQBhAGMAbAAgACcAYwA6AFwAdwBpAG4AZABvAHcAcwBcAHMAeQBzAHcAbwB3ADYANABcAGUAdgBlAG4AdAB2AHcAcgAuAGUAeABlACcAIAAtAGEAdQBkAGkAdAApAC4AYQB1AGQAaQB0AHQAbwBzAHQAcgBpAG4AZwANAAoADQAKAGkAZgAgACgAJABTAFIATwBfAHMAdwA2ADQAZQB2AHQAdgB3ACAALQBtAGEAdABjAGgAIAAnACgAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBSAGUAYQBkAEEAbgBkAEUAeABlAGMAdQB0AGUAKQAoAC4AfABcAG4AKQAqAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAFcAcgBpAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAUwB1AGMAYwBlAHMAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAUwB1AGIAZABpAHIAZQBjAHQAbwByAGkAZQBzAEEAbgBkAEYAaQBsAGUAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEMAaABhAG4AZwBlAFAAZQByAG0AaQBzAHMAaQBvAG4AcwBcAGIAKQAoAD8APQAuACoAPwBcAGIAVABhAGsAZQBPAHcAbgBlAHIAcwBoAGkAcABcAGIAKQApAHwAKABBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBXAHIAaQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAFMAdQBjAGMAZQBzAHMAXABiACkAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEQAZQBsAGUAdABlAFMAdQBiAGQAaQByAGUAYwB0AG8AcgBpAGUAcwBBAG4AZABGAGkAbABlAHMAXABiACkAKAA/AD0ALgAqAD8AXABiAEQAZQBsAGUAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBDAGgAYQBuAGcAZQBQAGUAcgBtAGkAcwBzAGkAbwBuAHMAXABiACkAKAA/AD0ALgAqAD8AXABiAFQAYQBrAGUATwB3AG4AZQByAHMAaABpAHAAXABiACkAKAAuAHwAXABuACkAKgBBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFIAZQBhAGQAQQBuAGQARQB4AGUAYwB1AHQAZQApACkAJwApAHsADQAKAAkAJABQAGEAcwBzAD0AIgBUAHIAdQBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAIgBQAGEAcwBzACAAPQAgACIALAAgACQAUABhAHMAcwAsACIAOwAiACwAIAAkAFMAUgBPAF8AcwB3ADYANABlAHYAdAB2AHcAKQANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAJACQAUABhAHMAcwA9ACIARgBhAGwAcwBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAIgBQAGEAcwBzACAAPQAiACwAIAAkAFAAYQBzAHMALAAiADsAIgAsACAAJABTAFIATwBfAHMAdwA2ADQAZQB2AHQAdgB3ACkADQAKAH0A'
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-058 - Certification Checklist Item - Ensure SRO Advanced Auditing is Configured for 'C:\windows\syswow64\eventvwr.msc'"
+      info        : "Ensure SRO Advanced Auditing is Configured for 'C:\windows\syswow64\eventvwr.msc'."
+      solution    : "Configure SRO Advanced Auditing for 'C:\windows\syswow64\eventvwr.msc'. 'Audit  : NT AUTHORITY\Authenticated Users Failure ReadAndExecute NT AUTHORITY\Authenticated Users Success, Failure DeleteSubdirectoriesAndFiles, Write, Delete, ChangePermissions, TakeOwnership'"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'JABTAFIATwBfAHMAdwA2ADQAZQB2AHQAdgB3AG0AcwBjACAAPQAgACgAZwBlAHQALQBhAGMAbAAgACcAYwA6AFwAdwBpAG4AZABvAHcAcwBcAHMAeQBzAHcAbwB3ADYANABcAGUAdgBlAG4AdAB2AHcAcgAuAG0AcwBjACcAIAAtAGEAdQBkAGkAdAApAC4AYQB1AGQAaQB0AHQAbwBzAHQAcgBpAG4AZwANAAoADQAKAGkAZgAgACgAJABTAFIATwBfAHMAdwA2ADQAZQB2AHQAdgB3AG0AcwBjACAALQBtAGEAdABjAGgAIAAnACgAQQB1AHQAaABlAG4AdABpAGMAYQB0AGUAZAAgAFUAcwBlAHIAcwAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBSAGUAYQBkAEEAbgBkAEUAeABlAGMAdQB0AGUAKQAoAC4AfABcAG4AKQAqAEEAdQB0AGgAZQBuAHQAaQBjAGEAdABlAGQAIABVAHMAZQByAHMAKAA/AD0ALgAqAD8AXABiAFcAcgBpAHQAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIAUwB1AGMAYwBlAHMAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARgBhAGkAbAB1AHIAZQBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAUwB1AGIAZABpAHIAZQBjAHQAbwByAGkAZQBzAEEAbgBkAEYAaQBsAGUAcwBcAGIAKQAoAD8APQAuACoAPwBcAGIARABlAGwAZQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEMAaABhAG4AZwBlAFAAZQByAG0AaQBzAHMAaQBvAG4AcwBcAGIAKQAoAD8APQAuACoAPwBcAGIAVABhAGsAZQBPAHcAbgBlAHIAcwBoAGkAcABcAGIAKQApAHwAKABBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBXAHIAaQB0AGUAXABiACkAKAA/AD0ALgAqAD8AXABiAFMAdQBjAGMAZQBzAHMAXABiACkAKAA/AD0ALgAqAD8AXABiAEYAYQBpAGwAdQByAGUAXABiACkAKAA/AD0ALgAqAD8AXABiAEQAZQBsAGUAdABlAFMAdQBiAGQAaQByAGUAYwB0AG8AcgBpAGUAcwBBAG4AZABGAGkAbABlAHMAXABiACkAKAA/AD0ALgAqAD8AXABiAEQAZQBsAGUAdABlAFwAYgApACgAPwA9AC4AKgA/AFwAYgBDAGgAYQBuAGcAZQBQAGUAcgBtAGkAcwBzAGkAbwBuAHMAXABiACkAKAA/AD0ALgAqAD8AXABiAFQAYQBrAGUATwB3AG4AZQByAHMAaABpAHAAXABiACkAKAAuAHwAXABuACkAKgBBAHUAdABoAGUAbgB0AGkAYwBhAHQAZQBkACAAVQBzAGUAcgBzACgAPwA9AC4AKgA/AFwAYgBGAGEAaQBsAHUAcgBlAFwAYgApACgAPwA9AC4AKgA/AFIAZQBhAGQAQQBuAGQARQB4AGUAYwB1AHQAZQApACkAJwApAHsADQAKAAkAJABQAGEAcwBzAD0AIgBUAHIAdQBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAIgBQAGEAcwBzACAAPQAgACIALAAgACQAUABhAHMAcwAsACIAOwAiACwAIAAkAFMAUgBPAF8AcwB3ADYANABlAHYAdAB2AHcAbQBzAGMAKQANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAJACQAUABhAHMAcwA9ACIARgBhAGwAcwBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAIgBQAGEAcwBzACAAPQAiACwAIAAkAFAAYQBzAHMALAAiADsAIgAsACAAJABTAFIATwBfAHMAdwA2ADQAZQB2AHQAdgB3AG0AcwBjACkADQAKAH0A'
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+description: "WN-CKL-059 - Certification Checklist Item - Applied Group Policy Audit and User Settings"
+type: AUDIT_POWERSHELL
+value_type: POLICY_TEXT
+value_data: ""
+powershell_args: "gpresult /Scope Computer /r"
+severity: MEDIUM
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-060 - Certification Checklist Item - Validate Amcore Content Date is within the Last 30 Days."
+      info        : "Ensure the Amcore Content Date has been Updated within the Last 30 Days."
+      solution    : "Update the Amcore Content Date"
+      value_type  : POLICY_TEXT
+      value_data  : ""
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\mcafee\avsolution\ds\ds' | select 'szContentCreationDate', 'dwContent*Version' | format-list"
+      severity    : MEDIUM
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-061 - Certification Checklist Item - Validate Correct DLP Policy is Set for the System."
+      info        : "Ensure the McAfee DLP Rule is Correct for the Functionality of the System."
+      solution    : "From EPO Server, Apply the Applicable DLP Policy to the System"
+      value_type  : POLICY_TEXT
+      value_data  : ""
+      powershell_args     : "Get-ItemProperty -path 'hklm:\software\mcafee\dlp\agent\policy' | select 'Name', 'Revision' | format-list"
+      severity    : MEDIUM
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-062 - Certification Checklist Item - Amcore Content Date has been Updated Within 30 Days."
+      info        : "Ensure the Amcore Content Date has been Updated within the Last 30 Days."
+      solution    : "Update the Amcore Content Date"
+      value_type  : POLICY_TEXT
+      value_data  : "True"
+      powershell_args     : 'DQAKAA0ACgAkAEQAQQBUAEQAYQB5AHMAPQAoAGcAZQB0AC0AZABhAHQAZQApAC4AQQBkAGQAZABhAHkAcwAoAC0AKAAzADAAKQApAC4AVABvAFMAdAByAGkAbgBnACgAJwB5AHkAeQB5AC0ATQBNAC0AZABkACcAKQANAAoAJABEAEEAVABEAGEAeQBzADIAPQBbAEQAYQB0AGUAVABpAG0AZQBdADoAOgAoACQARABBAFQARABhAHkAcwApAA0ACgAkAEQAQQBUAEQAYQB0AGUAPQAgAEcAZQB0AC0ASQB0AGUAbQBQAHIAbwBwAGUAcgB0AHkAVgBhAGwAdQBlACAALQBwAGEAdABoACAAJwBoAGsAbABtADoAXABzAG8AZgB0AHcAYQByAGUAXABtAGMAYQBmAGUAZQBcAGEAdgBzAG8AbAB1AHQAaQBvAG4AXABkAHMAXABkAHMAJwAgAC0ATgBhAG0AZQAgACcAcwB6AEMAbwBuAHQAZQBuAHQAQwByAGUAYQB0AGkAbwBuAEQAYQB0AGUAJwANAAoAJABEAEEAVABEAGEAdABlADIAIAA9ACAAWwBEAGEAdABlAFQAaQBtAGUAXQA6ADoAcABhAHIAcwBlAGUAeABhAGMAdAAoACQARABBAFQARABhAHQAZQAsACAAJwB5AHkAeQB5AC0ATQBNAC0AZABkACcALAAgACQAbgB1AGwAbAApAC4AVABvAFMAdAByAGkAbgBnACgAJwB5AHkAeQB5AC0ATQBNAC0AZABkACcAKQANAAoAJABEAEEAVABEAGEAdABlADMAIAA9ACAAWwBEAGEAdABlAFQAaQBtAGUAXQA6ADoAKAAkAEQAQQBUAEQAYQB0AGUAMgApAA0ACgBpAGYAKAAkAEQAQQBUAEQAYQB0AGUAMgAgAC0AZwBlACAAJABEAEEAVABEAGEAeQBzACkAewANAAoACQAkAFAAYQBzAHMAIAA9ACAAIgBUAHIAdQBlACIADQAKAAkAdwByAGkAdABlAC0AaABvAHMAdAAgACgAJABEAEEAVABEAGEAdABlADIALAAgACIAUABhAHMAcwAgAD0AIAAiACwAIAAkAFAAYQBzAHMAKQANAAoAfQANAAoAZQBsAHMAZQB7AA0ACgAJACQAUABhAHMAcwAgAD0AIAAiAEYAYQBsAHMAZQAiAA0ACgAJAHcAcgBpAHQAZQAtAGgAbwBzAHQAIAAoACQARABBAFQARABhAHQAZQAyACwAIAAiAFAAYQBzAHMAIAA9ACAAIgAsACAAJABQAGEAcwBzACkADQAKAH0ADQAKAA=='
+      ps_encoded_args  : YES
+      check_type  : CHECK_REGEX
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-063 - Certification Checklist Item - Review Local Accounts for Unnecessary Accounts/Discrepancies."
+      info        : "Review Local Accounts for Unnecessary Accounts/Discrepancies."
+      solution    : "Remediate any Unnecessary Accounts/Discrepancies."
+      value_type  : POLICY_TEXT
+      value_data  : ""
+      powershell_args     : "get-localuser | select Name, Description, SID, Enabled | format-list"
+      severity    : MEDIUM
+</custom_item>
+
+<custom_item>
+type: AUDIT_POWERSHELL
+description : "WN-CKL-064 - Certification Checklist Item - Validate Monitor Serial Number Information is Correct"
+info        : "Ensure Monitor Information is Correct and Approved."
+value_type: POLICY_TEXT
+value_data: ""
+powershell_args: 'DQAKACQATQBvAG4AaQB0AG8AcgBzACAAPQAgAEcAZQB0AC0AdwBtAGkAbwBiAGoAZQBjAHQAIABXAG0AaQBNAG8AbgBpAHQAbwByAEkARAAgAC0ATgBhAG0AZQBzAHAAYQBjAGUAIAByAG8AbwB0AFwAdwBtAGkADQAKAEYAbwByAEUAYQBjAGgAIAAoACQATQBvAG4AaQB0AG8AcgAgAGkAbgAgACQATQBvAG4AaQB0AG8AcgBzACkADQAKAHsADQAKACAAIAAgACAAJABNAGEAbgB1AGYAYQBjAHQAdQByAGUAcgAgAD0AIAAoACQATQBvAG4AaQB0AG8AcgAuAE0AYQBuAHUAZgBhAGMAdAB1AHIAZQByAE4AYQBtAGUAIAAtAG4AbwB0AG0AYQB0AGMAaAAgADAAIAB8ACAARgBvAHIARQBhAGMAaAB7AFsAYwBoAGEAcgBdACQAXwB9ACkAIAAtAGoAbwBpAG4AIAAiACIADQAKACAAIAAgACAAJABOAGEAbQBlACAAPQAgACgAJABNAG8AbgBpAHQAbwByAC4AVQBzAGUAcgBGAHIAaQBlAG4AZABsAHkATgBhAG0AZQAgAC0AbgBvAHQAbQBhAHQAYwBoACAAMAAgAHwAIABGAG8AcgBFAGEAYwBoAHsAWwBjAGgAYQByAF0AJABfAH0AKQAgAC0AagBvAGkAbgAgACIAIgANAAoAIAAgACAAIAAkAFMAZQByAGkAYQBsACAAPQAgACgAJABNAG8AbgBpAHQAbwByAC4AUwBlAHIAaQBhAGwATgB1AG0AYgBlAHIASQBEACAALQBuAG8AdABtAGEAdABjAGgAIAAwACAAfAAgAEYAbwByAEUAYQBjAGgAewBbAGMAaABhAHIAXQAkAF8AfQApACAALQBqAG8AaQBuACAAIgAiAA0ACgB9AA0ACgAgACAAIAAgAHcAcgBpAHQAZQAtAGgAbwBzAHQAIABNAGEAbgB1AGYAYQBjAHQAdQByAGUAcgA6ACAADQAKACAAIAAgACAAZQBjAGgAbwAgACIAJABNAGEAbgB1AGYAYQBjAHQAdQByAGUAcgAiAA0ACgAgACAAIAAgAHcAcgBpAHQAZQAtAGgAbwBzAHQAIABNAG8AZABlAGwAOgANAAoAIAAgACAAIABlAGMAaABvACAAIgAkAE4AYQBtAGUAIgANAAoAIAAgACAAIAB3AHIAaQB0AGUALQBoAG8AcwB0ACAAUwBlAHIAaQBhAGwAOgANAAoAIAAgACAAIABlAGMAaABvACAAIgAkAFMAZQByAGkAYQBsACIAIAANAAoAIAAgACAAIAA='
+ps_encoded_args: YES
+severity: MEDIUM
+</custom_item>
+
+<custom_item>
+      type        : AUDIT_POWERSHELL
+      description : "WN-CKL-065 - Certification Checklist Item - Ensure SplunkForwarder Service is Running As Local System"
+      info        : "Ensure the 'SplunkForwarder' service is running as local system."
+      solution    : "In services, navigate to the splunkforwarder service and select log on as local system"
+      value_type  : POLICY_TEXT
+      value_data  : "local system"
+      powershell_args     : "Get-WmiObject win32_service | Where-Object {$_.name -eq 'SplunkForwarder'} | Select-Object -Property Name,StartName | Format-List"
+            
+</custom_item>	
+
+
+</group_policy>
+</check_type>
