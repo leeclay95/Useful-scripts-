@@ -1,0 +1,184 @@
+# Define the hostname variable
+$hostname = "splunk-vm"
+
+# Define the paths to the configuration files
+$serverConfPath = "C:\Program Files\SplunkUniversalForwarder\etc\system\local\server.conf"
+$outputsConfPath = "C:\Program Files\SplunkUniversalForwarder\etc\system\local\outputs.conf"
+$deploymentClientConfPath = "C:\Program Files\SplunkUniversalForwarder\etc\system\local\deploymentclient.conf"
+$instanceCfgPath = "C:\Program Files\SplunkUniversalForwarder\etc\instance.cfg"
+
+# Define the path to the local log file
+$logPath = "C:\Logs\SplunkCheckLog.txt"
+
+# Function to restart the Splunk Forwarder service on the local machine
+function Restart-SplunkService {
+    try {
+        Restart-Service -Name SplunkForwarder -Force
+        Write-Output "Splunk Forwarder service restarted successfully."
+    } catch [System.Exception] {
+        $errorMsg = $_.Exception.Message
+        Write-Output "Failed to restart the Splunk Forwarder service: $errorMsg"
+    }
+}
+
+# Function to check and update configuration files
+function CheckAndUpdateConfig {
+    param (
+        [string]$FilePath,
+        [string]$Pattern,
+        [string]$Replacement
+    )
+
+    $configContent = Get-Content -Path $FilePath
+    $matchedLine = $configContent | Select-String -Pattern $Pattern
+
+    if ($matchedLine) {
+        $logMessage = "Found matching line in $FilePath."
+        Write-Output $logMessage
+        Add-Content -Path $logPath -Value $logMessage
+
+        if ($matchedLine -notmatch $Replacement) {
+            $logMessage = "Mismatch found in $FilePath. Modifying..."
+            Write-Output $logMessage
+            Add-Content -Path $logPath -Value $logMessage
+
+            # Backup the existing config file
+            $backupPath = "${FilePath}.bak"
+            Copy-Item -Path $FilePath -Destination $backupPath
+
+            $logMessage = "Backup of $FilePath created at: $backupPath"
+            Write-Output $logMessage
+            Add-Content -Path $logPath -Value $logMessage
+
+            # Modify the config file
+            $newConfigContent = $configContent -replace $Pattern, $Replacement
+
+            try {
+                # Save the modified config file
+                $newConfigContent | Set-Content -Path $FilePath
+
+                $logMessage = "$FilePath successfully modified."
+                Write-Output $logMessage
+                Add-Content -Path $logPath -Value $logMessage
+
+                return $true # Indicate that changes were made
+
+            } catch [System.Exception] {
+                $errorMsg = $_.Exception.Message
+                $logMessage = "Failed to modify $FilePath: $errorMsg"
+                Write-Output $logMessage
+                Add-Content -Path $logPath -Value $logMessage
+            }
+        } else {
+            $logMessage = "$FilePath is already correct."
+            Write-Output $logMessage
+            Add-Content -Path $logPath -Value $logMessage
+        }
+    } else {
+        $logMessage = "$Pattern not found in $FilePath."
+        Write-Output $logMessage
+        Add-Content -Path $logPath -Value $logMessage
+    }
+
+    return $false # Indicate that no changes were made
+}
+
+# Create or clear the log file
+if (Test-Path -Path $logPath) {
+    Clear-Content -Path $logPath
+} else {
+    New-Item -Path $logPath -ItemType File
+}
+
+# Check server.conf
+if (Test-Path -Path $serverConfPath) {
+    $logMessage = "server.conf file found."
+    Write-Output $logMessage
+    Add-Content -Path $logPath -Value $logMessage
+
+    # Read the server.conf file
+    $serverConf = Get-Content -Path $serverConfPath
+
+    # Output the contents for debugging
+    $logMessage = "Contents of server.conf:"
+    Write-Output $logMessage
+    Add-Content -Path $logPath -Value $logMessage
+    $serverConf | ForEach-Object { Write-Output $_; Add-Content -Path $logPath -Value $_ }
+
+    # Find the line that contains "serverName"
+    $serverNameLine = $serverConf | Select-String -Pattern "serverName\s*=\s*(.+)"
+
+    if ($serverNameLine) {
+        # Extract the serverName value
+        $serverName = $serverNameLine.Matches[0].Groups[1].Value.Trim()
+
+        # Output the extracted serverName
+        $logMessage = "Extracted serverName: $serverName"
+        Write-Output $logMessage
+        Add-Content -Path $logPath -Value $logMessage
+
+        # Compare the serverName to the actual computer name
+        if ($serverName -ne $env:COMPUTERNAME) {
+            $logMessage = "Mismatch found. Modifying server.conf..."
+            Write-Output $logMessage
+            Add-Content -Path $logPath -Value $logMessage
+
+            # Backup the existing server.conf
+            $backupPath = "${serverConfPath}.bak"
+            Copy-Item -Path $serverConfPath -Destination $backupPath
+
+            $logMessage = "Backup of server.conf created at: $backupPath"
+            Write-Output $logMessage
+            Add-Content -Path $logPath -Value $logMessage
+
+            # Modify the serverName in the server.conf file
+            $newServerConf = $serverConf -replace "serverName\s*=\s*.*", "serverName = $env:COMPUTERNAME"
+
+            try {
+                # Save the modified server.conf file
+                $newServerConf | Set-Content -Path $serverConfPath
+
+                $logMessage = "server.conf successfully modified to match the computer name."
+                Write-Output $logMessage
+                Add-Content -Path $logPath -Value $logMessage
+            } catch [System.Exception] {
+                $errorMsg = $_.Exception.Message
+                $logMessage = "Failed to modify server.conf: $errorMsg"
+                Write-Output $logMessage
+                Add-Content -Path $logPath -Value $logMessage
+            }
+        } else {
+            $logMessage = "serverName matches the computer name."
+            Write-Output $logMessage
+            Add-Content -Path $logPath -Value $logMessage
+        }
+    } else {
+        $logMessage = "serverName not found in server.conf."
+        Write-Output $logMessage
+        Add-Content -Path $logPath -Value $logMessage
+    }
+} else {
+    $logMessage = "server.conf file not found."
+    Write-Output $logMessage
+    Add-Content -Path $logPath -Value $logMessage
+}
+
+# Check and update outputs.conf
+$updateOutputs = CheckAndUpdateConfig -FilePath $outputsConfPath -Pattern "server\s*=\s*.*:9997" -Replacement "server = $hostname:9997"
+
+# Check and update deploymentclient.conf
+$updateDeploymentClient = CheckAndUpdateConfig -FilePath $deploymentClientConfPath -Pattern "targetUri\s*=\s*.*:8089" -Replacement "targetUri = $hostname:8089"
+
+# Restart Splunk service if any changes were made
+if ($updateOutputs -or $updateDeploymentClient) {
+    # Backup the instance.cfg file
+    $backupInstanceCfgPath = "${instanceCfgPath}.bak"
+    Copy-Item -Path $instanceCfgPath -Destination $backupInstanceCfgPath
+
+    Write-Output "Backup of instance.cfg created at: $backupInstanceCfgPath"
+
+    # Restart the Splunk Forwarder service
+    Restart-SplunkService
+} else {
+    Write-Output "No changes required. Splunk Forwarder service restart not needed."
+}
