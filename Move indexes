@@ -1,0 +1,63 @@
+#!/bin/bash 
+# Written by Lee Clayton 9/30/2024
+
+# Variables
+SPLUNK_HOME="/opt/splunk"  # Change this to your Splunk home directory
+TARGET_APP="my_indexes_app"  # Target app where all indexes will be consolidated
+TARGET_CONF="$SPLUNK_HOME/etc/apps/$TARGET_APP/local/indexes.conf"
+APPS_DIR="$SPLUNK_HOME/etc/apps"
+EXCLUDE_APPS=("run_app" "test1")  # Add apps to exclude (case-insensitive)
+
+# Ensure the target app directory exists
+mkdir -p "$SPLUNK_HOME/etc/apps/$TARGET_APP/local"
+
+# Backup the target indexes.conf if it exists
+if [ -f "$TARGET_CONF" ]; then
+  cp "$TARGET_CONF" "$TARGET_CONF.bak_$(date +%F_%T)"
+fi
+
+# Convert exclude apps array to lowercase for case-insensitive matching
+EXCLUDE_APPS_LOWER=()
+for app in "${EXCLUDE_APPS[@]}"; do
+  EXCLUDE_APPS_LOWER+=("$(echo "$app" | tr '[:upper:]' '[:lower:]')")
+done
+
+# Function to check if an app is in the exclude list (case-insensitive)
+is_excluded_app() {
+  local app_name="$1"
+  app_name_lower=$(echo "$app_name" | tr '[:upper:]' '[:lower:]')
+
+  for exclude_app in "${EXCLUDE_APPS_LOWER[@]}"; do
+    if [[ "$app_name_lower" == "$exclude_app" ]]; then
+      return 0  # Found in exclude list
+    fi
+  done
+
+  return 1  # Not found in exclude list
+}
+
+# Find all existing indexes.conf files in other apps (excluding the target app)
+find "$APPS_DIR" -path "*/local/indexes.conf" -not -path "*/$TARGET_APP/*" | while read -r conf_file; do
+  # Extract app name from the path
+  app_dir=$(dirname "$conf_file")
+  app_name=$(basename "$(dirname "$app_dir")")  # Get the app name
+  
+  # Check if the app should be excluded
+  if is_excluded_app "$app_name"; then
+    echo "Skipping excluded app: $app_name"
+    continue
+  fi
+
+  echo "Copying index configurations from $conf_file to $TARGET_CONF"
+  
+  # Append the contents of each indexes.conf to the target indexes.conf
+  echo "# Moved from $conf_file" >> "$TARGET_CONF"
+  cat "$conf_file" >> "$TARGET_CONF"
+  echo -e "\n" >> "$TARGET_CONF"
+  
+  # Optionally, disable or remove the old indexes.conf (comment this line if you don't want to delete the old files)
+  mv "$conf_file" "$conf_file.old"
+done
+
+echo "All applicable indexes moved to $TARGET_CONF."
+echo "Please restart Splunk to apply changes."
