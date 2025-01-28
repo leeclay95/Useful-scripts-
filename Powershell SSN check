@@ -1,0 +1,55 @@
+# Define the starting directory and file extensions to search
+$startDirectory = "C:\Your\Start\Directory"  # Replace with your desired directory
+$fileExtensions = @(".txt", ".pdf", ".xlsx")  # Add or modify extensions as needed
+
+# Define the regex pattern for Social Security Numbers
+$ssnPattern = '\b(?!666|000|9\d{2})\d{3}-(?!00)\d{2}-(?!0000)\d{4}\b'
+
+# Function to search for files and SSNs
+function Find-SSNs {
+    param (
+        [string]$Directory,
+        [string[]]$Extensions,
+        [string]$Pattern
+    )
+
+    # Get all files with the specified extensions
+    $files = Get-ChildItem -Path $Directory -Recurse -File | Where-Object {
+        $Extensions -contains $_.Extension
+    }
+
+    foreach ($file in $files) {
+        try {
+            # Read file content
+            $content = switch ($file.Extension.ToLower()) {
+                ".txt" { Get-Content $file.FullName -ErrorAction Stop }
+                ".pdf" { (Get-Content $file.FullName -Raw -ErrorAction Stop) -join "\n" }  # For PDFs, you might need a parser for better results
+                ".xlsx" {
+                    # Use Import-Excel for Excel files (requires ImportExcel module)
+                    if (Get-Module -ListAvailable -Name ImportExcel) {
+                        Import-Excel $file.FullName -ErrorAction Stop | Out-String
+                    } else {
+                        Write-Warning "ImportExcel module is not installed. Skipping $($file.FullName)"
+                        continue
+                    }
+                }
+                default { Write-Warning "Unsupported file type: $($file.Extension). Skipping $($file.FullName)"; continue }
+            }
+
+            # Search for SSNs in the content
+            $matches = [regex]::Matches($content, $Pattern)
+
+            if ($matches.Count -gt 0) {
+                Write-Output "File: $($file.FullName)"
+                foreach ($match in $matches) {
+                    Write-Output "  Found SSN: $($match.Value)"
+                }
+            }
+        } catch {
+            Write-Warning "Failed to process file: $($file.FullName). Error: $_"
+        }
+    }
+}
+
+# Run the function
+Find-SSNs -Directory $startDirectory -Extensions $fileExtensions -Pattern $ssnPattern
